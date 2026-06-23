@@ -125,7 +125,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-width: 170px;
+      width: 180px;
+      flex-shrink: 0;
       padding: 0 10px
     }
 
@@ -404,6 +405,17 @@
       background: #999
     }
 
+    .c-hamburger .branch-head {
+      border-color: #1b2a41;
+      color: #c79a52;
+      background: #1b2a41
+    }
+
+    .c-hamburger .trunk,
+    .c-hamburger .sub-branch::before {
+      background: #1b2a41
+    }
+
     /* ── Legend ── */
     .legend {
       display: flex;
@@ -519,7 +531,7 @@
 
 
 
-        <!-- 4 · Team -->
+        <!-- 3 · Team -->
         <div class="branch c-green" data-branch>
           <div class="branch-head" data-head>Team</div>
           <div class="branch-body">
@@ -536,7 +548,7 @@
           </div>
         </div>
 
-        <!-- 5 · Insights -->
+        <!-- 4 · Insights -->
         <div class="branch c-teal" data-branch>
           <div class="branch-head" data-head>Insights</div>
           <div class="branch-body">
@@ -555,7 +567,8 @@
             </div>
           </div>
         </div>
-        <!-- 8 · Contact -->
+
+        <!-- 5 · Contact -->
         <div class="branch c-purple" data-branch>
           <div class="branch-head" data-head>Contact</div>
           <div class="branch-body">
@@ -570,7 +583,7 @@
           </div>
         </div>
 
-        <!-- 9 · Client Login -->
+        <!-- 6 · Client Login -->
         <div class="branch c-gray" data-branch>
           <div class="branch-head" data-head>Client Login</div>
           <div class="branch-body">
@@ -582,66 +595,63 @@
           </div>
         </div>
 
-        <!-- 3 · About -->
-        <div class="branch c-gold" data-branch>
-          <div class="branch-head" data-head>About</div>
+        <!-- 7 · Hamburger Menu -->
+        <div class="branch c-hamburger" data-branch>
+          <div class="branch-head" data-head>Hamburger Menu</div>
           <div class="branch-body">
             <div class="main-stack">
               <div class="trunk"></div>
-              <div class="page-node">About Page</div>
-              <div class="section-leaf">Hero</div>
-              <div class="section-leaf">Our story</div>
-              <div class="section-leaf">Leadership</div>
-              <div class="section-leaf">Our values</div>
-              <div class="section-leaf">Credentials / stats</div>
-              <div class="section-leaf">Community impact</div>
-              <div class="section-leaf">CTA banner</div>
-            </div>
-            <div class="sub-branch">
-              <div class="page-node">Our Story</div>
-              <div class="page-node">Our Values</div>
-              <div class="page-node">Community Impact</div>
-            </div>
-          </div>
-        </div>
-        <!-- 6 · Events -->
-        <div class="branch c-blue" data-branch>
-          <div class="branch-head" data-head>Events</div>
-          <div class="branch-body">
-            <div class="main-stack">
-              <div class="trunk"></div>
-              <div class="page-node">Events Page</div>
-              <div class="section-leaf">Hero</div>
-              <div class="section-leaf">Upcoming events</div>
-              <div class="section-leaf">Filter bar</div>
-              <div class="section-leaf">CTA banner</div>
-            </div>
-            <div class="sub-branch">
-              <div class="page-node">Event Detail</div>
-            </div>
-          </div>
-        </div>
 
-        <!-- 7 · Corporate Advantage -->
-        <div class="branch c-navy" data-branch>
-          <div class="branch-head" data-head>Corporate Advantage<span class="b2b-badge">B2B</span></div>
-          <div class="branch-body">
-            <div class="main-stack">
-              <div class="trunk"></div>
-              <div class="page-node">Corp. Advantage Page</div>
-              <div class="section-leaf">Hero</div>
-              <div class="section-leaf">Overview / value proposition</div>
-              <div class="section-leaf">Our 4D process</div>
-              <div class="section-leaf">Our approach (3 pillars)</div>
-              <div class="section-leaf">Tabbed content</div>
-              <div class="section-leaf">Related insights</div>
-              <div class="section-leaf">CTA banner</div>
-            </div>
-            <div class="sub-branch">
-              <div class="page-node">Overview</div>
-              <div class="page-node">Helping Business Owners</div>
-              <div class="page-node">Helping Your People</div>
-              <div class="page-node">Participant Resources</div>
+              <!-- About -->
+              <div class="c-gold" style="position: relative; width: 100%; padding-left: 20px; margin-top: 10px; margin-bottom: 24px;">
+                <div class="trunk"></div>
+                <div class="page-node">About Page</div>
+                <div class="section-leaf">Hero</div>
+                <div class="section-leaf">Our story</div>
+                <div class="section-leaf">Leadership</div>
+                <div class="section-leaf">Our values</div>
+                <div class="section-leaf">Credentials / stats</div>
+                <div class="section-leaf">Community impact</div>
+                <div class="section-leaf">CTA banner</div>
+                <div class="sub-branch">
+                  <div class="page-node">Our Story</div>
+                  <div class="page-node">Our Values</div>
+                  <div class="page-node">Community Impact</div>
+                </div>
+              </div>
+
+              <!-- Events -->
+              <div class="c-blue" style="position: relative; width: 100%; padding-left: 20px; margin-bottom: 24px;">
+                <div class="trunk"></div>
+                <div class="page-node">Events Page</div>
+                <div class="section-leaf">Hero</div>
+                <div class="section-leaf">Upcoming events</div>
+                <div class="section-leaf">Filter bar</div>
+                <div class="section-leaf">CTA banner</div>
+                <div class="sub-branch">
+                  <div class="page-node">Event Detail</div>
+                </div>
+              </div>
+
+              <!-- Corporate Advantage -->
+              <div class="c-navy" style="position: relative; width: 100%; padding-left: 20px; margin-bottom: 10px;">
+                <div class="trunk"></div>
+                <div class="page-node">Corp. Advantage Page</div>
+                <div class="section-leaf">Hero</div>
+                <div class="section-leaf">Overview / value proposition</div>
+                <div class="section-leaf">Our 4D process</div>
+                <div class="section-leaf">Our approach (3 pillars)</div>
+                <div class="section-leaf">Tabbed content</div>
+                <div class="section-leaf">Related insights</div>
+                <div class="section-leaf">CTA banner</div>
+                <div class="sub-branch">
+                  <div class="page-node">Overview</div>
+                  <div class="page-node">Helping Business Owners</div>
+                  <div class="page-node">Helping Your People</div>
+                  <div class="page-node">Participant Resources</div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -699,13 +709,14 @@
         const cls = branch.className;
         if (cls.includes('c-red')) return '#e06b5e';
         if (cls.includes('c-orange')) return '#e8a04c';
-        if (cls.includes('c-gold')) return '#c79a52';
         if (cls.includes('c-green')) return '#5da87a';
         if (cls.includes('c-teal')) return '#4a9ea8';
-        if (cls.includes('c-blue')) return '#5b82c7';
-        if (cls.includes('c-navy')) return '#1b2a41';
         if (cls.includes('c-purple')) return '#8b6fbf';
         if (cls.includes('c-gray')) return '#999';
+        if (cls.includes('c-hamburger')) return '#1b2a41';
+        if (cls.includes('c-gold')) return '#c79a52';
+        if (cls.includes('c-blue')) return '#5b82c7';
+        if (cls.includes('c-navy')) return '#1b2a41';
         return '#1b2a41';
       }
 
