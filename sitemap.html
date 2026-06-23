@@ -64,7 +64,7 @@
 
     .tree-wrap {
       position: relative;
-      padding: 40px 40px 120px;
+      padding: 40px 160px 120px 40px;
       width: fit-content;
       margin: 0 auto
     }
@@ -124,8 +124,8 @@
     .branch {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      width: 180px;
+      align-items: flex-start;
+      min-width: 170px;
       flex-shrink: 0;
       padding: 0 10px
     }
@@ -139,7 +139,8 @@
       white-space: nowrap;
       border: 2.5px solid;
       position: relative;
-      background: #fffdf9
+      background: #fffdf9;
+      margin-left: 20px
     }
 
     .branch-body {
