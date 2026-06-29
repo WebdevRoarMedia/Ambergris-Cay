@@ -820,7 +820,11 @@
 
       requestAnimationFrame(() => { drawLines(); centerScroll(); });
       window.addEventListener('resize', () => { drawLines(); centerScroll(); });
+      window.addEventListener('load', () => { drawLines(); centerScroll(); });
       document.fonts.ready.then(() => { drawLines(); centerScroll(); });
+      document.querySelectorAll('img').forEach(img => {
+        if (!img.complete) img.addEventListener('load', () => { drawLines(); centerScroll(); });
+      });
     })();
   </script>
   <a href="./index.html" class="back-btn">← Hub</a>
