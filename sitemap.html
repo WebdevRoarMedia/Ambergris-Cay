@@ -167,7 +167,7 @@
     }
 
     .page-node {
-      border: 1.8px dashed;
+      border: 1.8px solid;
       border-radius: 8px;
       padding: 5px 12px;
       font-size: 12px;
@@ -176,6 +176,10 @@
       white-space: nowrap;
       background: #fffdf9;
       position: relative
+    }
+
+    .page-node.sub-page {
+      border-style: dashed
     }
 
     .section-leaf {
@@ -189,6 +193,13 @@
       padding-left: 18px
     }
 
+    .section-leaf.sub-item {
+      margin-left: 18px;
+      font-size: 11px;
+      color: rgba(27, 42, 65, .64);
+      padding-left: 16px
+    }
+
     .section-leaf::before {
       content: '';
       position: absolute;
@@ -196,6 +207,15 @@
       top: 50%;
       width: 12px;
       height: 1.5px
+    }
+
+    .section-leaf.sub-item::before {
+      width: 7px;
+      height: 7px;
+      top: 12px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1.5px solid currentColor
     }
 
     .sub-branch {
@@ -505,11 +525,12 @@
               <div class="section-leaf">Hero video / banner — immersive island storytelling + CTA</div>
               <div class="section-leaf">Full-bleed hero video, muted, auto-play</div>
               <div class="section-leaf">Booking widget — Sticky CTA (redesign required)</div>
+              <div class="section-leaf sub-item">Is a statement</div>
               <div class="section-leaf">All-inclusive callout — Anchor link → What's Included</div>
               <div class="section-leaf">What's included icons</div>
               <div class="section-leaf">Persona-driven accommodation pathways</div>
-              <div class="section-leaf">Couples, families, luxury groups, celebrations</div>
-              <div class="section-leaf">Wellness seekers, adventure &amp; nature, groups</div>
+              <div class="section-leaf sub-item">Couples, families, luxury groups, celebrations</div>
+              <div class="section-leaf sub-item">Wellness seekers, adventure &amp; nature, celebrations / groups</div>
               <div class="section-leaf">Featured accommodations carousel</div>
               <div class="section-leaf">Banner callout for Offers</div>
               <div class="section-leaf">Signature experiences section</div>
@@ -517,7 +538,8 @@
               <div class="section-leaf">Interactive location map — day-at-a-glance</div>
               <div class="section-leaf">Testimonials & social proof (optional)</div>
               <div class="section-leaf">Instagram / social integration (optional)</div>
-              <div class="section-leaf">Accolades (optional)</div>
+              <div class="section-leaf">Accolades</div>
+              <div class="section-leaf sub-item">Recommend in footer</div>
             </div>
           </div>
         </div>
@@ -528,20 +550,21 @@
           <div class="branch-body">
             <div class="main-stack">
               <div class="trunk"></div>
-              <div class="page-node">The Island Page</div>
-              <div class="section-leaf">Why Ambergris Cay — brand narrative</div>
-              <div class="section-leaf">Top-level brand narrative landing</div>
+              <div class="page-node">Overview — Why Ambergris Cay</div>
+              <div class="section-leaf">Why Ambergris Cay — brand story, place, values</div>
+              <div class="section-leaf sub-item">Top-level brand narrative landing</div>
             </div>
             <div class="sub-branch">
-              <div class="page-node">Location & Getting Here</div>
+              <div class="page-node sub-page">Location &amp; Getting Here</div>
               <div class="section-leaf">Linked from homepage map + Plan nav item</div>
-              <div class="section-leaf">Infographic on how to arrive</div>
-              <div class="page-node">Private Aviation & Transfers</div>
+              <div class="section-leaf sub-item">Infographic on how to arrive</div>
+              <div class="page-node sub-page">Private Aviation &amp; Transfers</div>
               <div class="section-leaf">Standalone page — key luxury signal</div>
-              <div class="page-node">Sustainability</div>
+              <div class="page-node sub-page">Sustainability</div>
               <div class="section-leaf">Solar plant, water filtration, ethos</div>
-              <div class="page-node">Island Life (optional)</div>
+              <div class="page-node sub-page">Island Life</div>
               <div class="section-leaf">Editorial / day-in-the-life content</div>
+              <div class="section-leaf sub-item">New; optional - feeds Journal</div>
             </div>
           </div>
         </div>
@@ -552,19 +575,23 @@
           <div class="branch-body">
             <div class="main-stack">
               <div class="trunk"></div>
-              <div class="page-node">Stay Page</div>
-              <div class="section-leaf">Accommodations overview — comparison-led landing</div>
-              <div class="section-leaf">Comparison tool — filter by guest type</div>
-              <div class="section-leaf">Couples / groups / families</div>
-              <div class="section-leaf">360° views on each unit</div>
-              <div class="section-leaf">Evocative lead sentence per accommodation type</div>
+              <div class="page-node">Accommodations Overview</div>
+              <div class="section-leaf">What you live in — visual-first, comparison-led</div>
+              <div class="section-leaf sub-item">Primary landing with comparison tool</div>
+              <div class="section-leaf sub-item">Comparison tool / chart — couples / groups / families</div>
+              <div class="section-leaf">Add 360s into each accommodation</div>
             </div>
             <div class="sub-branch">
-              <div class="page-node">Bungalows (5 pages)</div>
-              <div class="page-node">Villas (11 pages)</div>
-              <div class="section-leaf">Villa fact sheet PDF — download CTA</div>
-              <div class="page-node">Dream Estate (3 pages)</div>
-              <div class="page-node">What's Included</div>
+              <div class="page-node sub-page">Bungalows</div>
+              <div class="section-leaf">Individual visual page (5 total)</div>
+              <div class="page-node sub-page">Villas</div>
+              <div class="section-leaf">Individual visual pages (11 pages)</div>
+              <div class="section-leaf sub-item">Villa fact sheets — download CTA on each villa page</div>
+              <div class="section-leaf sub-item">PDF — travel advisors</div>
+              <div class="page-node sub-page">Dream Estate</div>
+              <div class="section-leaf">Dedicated premium landing page (3 pages)</div>
+              <div class="page-node sub-page">What's Included</div>
+              <div class="section-leaf">Linked from homepage + nav dropdown</div>
             </div>
           </div>
         </div>
@@ -575,20 +602,21 @@
           <div class="branch-body">
             <div class="main-stack">
               <div class="trunk"></div>
-              <div class="page-node">Dine Page</div>
-              <div class="section-leaf">Dining overview — all outlets landing</div>
-              <div class="section-leaf">All-inclusive spirits & à la carte — one-glance note</div>
+              <div class="page-node">Dining Overview</div>
+              <div class="section-leaf">What you taste</div>
+              <div class="section-leaf sub-item">Section landing with all outlets</div>
+              <div class="section-leaf sub-item">Premium spirits and à la carte dining are included</div>
               <div class="section-leaf">Chef's profile</div>
             </div>
             <div class="sub-branch">
-              <div class="page-node">The Clubhouse</div>
-              <div class="page-node">Calico Restaurant</div>
-              <div class="page-node">Hangover Tiki Bar</div>
+              <div class="page-node sub-page">The Clubhouse</div>
+              <div class="page-node sub-page">Calico Restaurant</div>
+              <div class="page-node sub-page">Hangover Tiki Bar</div>
               <div class="section-leaf">Lifestyle video</div>
-              <div class="page-node">Mahoney's Bar</div>
+              <div class="page-node sub-page">Mahoney's Bar</div>
               <div class="section-leaf">Located within Calico</div>
-              <div class="page-node">Private & In-Villa Dining</div>
-              <div class="page-node">Paid F&amp;B Experiences</div>
+              <div class="page-node sub-page">Private &amp; In-Villa Dining</div>
+              <div class="page-node sub-page">Paid F&amp;B Experiences</div>
               <div class="section-leaf">Chef's Table & Romantic Dinner highlights</div>
             </div>
           </div>
@@ -600,21 +628,27 @@
           <div class="branch-body">
             <div class="main-stack">
               <div class="trunk"></div>
-              <div class="page-node">Experiences Page</div>
-              <div class="section-leaf">Visual grid — skimmable by category</div>
+              <div class="page-node">Experiences Overview</div>
+              <div class="section-leaf">What you do — visual grid, clearly categorized</div>
+              <div class="section-leaf sub-item">Visual grid landing — skimmable by category</div>
               <div class="section-leaf">Downloadable Experience Guide PDF</div>
+              <div class="section-leaf sub-item">Single CTA replacing text-heavy pages</div>
             </div>
             <div class="sub-branch">
-              <div class="page-node">Water Adventures</div>
+              <div class="page-node sub-page">Water Adventures</div>
               <div class="section-leaf">Reef, snorkel, kayak, paddleboard, fishing, charter</div>
-              <div class="page-node">Nature & Exploration</div>
-              <div class="section-leaf">Whale watching, wildlife, caves & ruins, stargazing</div>
-              <div class="page-node">Paid Excursions</div>
-              <div class="page-node">E-Bike Tours</div>
-              <div class="page-node">Family Experiences</div>
-              <div class="page-node">Kids Club 'Wylder'</div>
-              <div class="page-node">Bespoke Experiences</div>
-              <div class="page-node">360° Resort Virtual Tours</div>
+              <div class="page-node sub-page">Nature &amp; Exploration</div>
+              <div class="section-leaf">Whale watching, fishing, wildlife, caves & ruins, stargazing</div>
+              <div class="page-node sub-page">Paid Excursions</div>
+              <div class="page-node sub-page">E-Bike Tours</div>
+              <div class="section-leaf">Individual page</div>
+              <div class="page-node sub-page">Family Experiences</div>
+              <div class="section-leaf">Family-curated activity hub</div>
+              <div class="page-node sub-page">Kids Club 'Wylder'</div>
+              <div class="section-leaf">Standalone page — festive launch</div>
+              <div class="page-node sub-page">Bespoke Experiences</div>
+              <div class="section-leaf">Custom / curated offerings</div>
+              <div class="page-node sub-page">360° Resort Virtual Tours</div>
               <div class="section-leaf">Opens in new tab</div>
             </div>
           </div>
@@ -626,19 +660,21 @@
           <div class="branch-body">
             <div class="main-stack">
               <div class="trunk"></div>
-              <div class="page-node">Wellness Page</div>
-              <div class="section-leaf">Hub landing linking all sub-pages</div>
-              <div class="section-leaf">Wellness here isn't a program</div>
-              <div class="section-leaf">Specials — banner callout → Spa page</div>
+              <div class="page-node">Wellness Overview</div>
+              <div class="section-leaf">Consolidated hub — spa, fitness, movement</div>
+              <div class="section-leaf sub-item">Hub landing linking all sub-pages</div>
+              <div class="section-leaf sub-item">Wellness here isn't a program</div>
+              <div class="section-leaf">Specials</div>
+              <div class="section-leaf sub-item">Banner callout → Spa page</div>
             </div>
             <div class="sub-branch">
-              <div class="page-node">Spa</div>
+              <div class="page-node sub-page">Spa</div>
               <div class="section-leaf">Specials, menus, booking links</div>
               <div class="section-leaf">New spa complex — coming soon (2027/28)</div>
-              <div class="page-node">Fitness Pavilion</div>
+              <div class="page-node sub-page">Fitness Pavilion</div>
               <div class="section-leaf">Hydrow & Peloton highlight</div>
-              <div class="page-node">Yoga</div>
-              <div class="page-node">Pickleball & Tennis</div>
+              <div class="page-node sub-page">Yoga</div>
+              <div class="page-node sub-page">Pickleball &amp; Tennis</div>
               <div class="section-leaf">Pro instructor bio</div>
             </div>
           </div>
@@ -650,17 +686,18 @@
           <div class="branch-body">
             <div class="main-stack">
               <div class="trunk"></div>
-              <div class="page-node">Celebrations Page</div>
-              <div class="section-leaf">Formerly Groups &amp; Events</div>
+              <div class="page-node">Celebrations Overview</div>
+              <div class="section-leaf">Why you come together — occasion-first framing</div>
+              <div class="section-leaf sub-item">Formerly Groups &amp; Events</div>
               <div class="section-leaf">Testimonials — group + wedding social proof</div>
               <div class="section-leaf">Contact form</div>
             </div>
             <div class="sub-branch">
-              <div class="page-node">Weddings</div>
-              <div class="page-node">Honeymoons</div>
-              <div class="page-node">Private Events + Buyouts</div>
+              <div class="page-node sub-page">Weddings</div>
+              <div class="page-node sub-page">Honeymoons</div>
+              <div class="page-node sub-page">Private Events + Buyouts</div>
               <div class="section-leaf">Incentives, business retreats &amp; meetings</div>
-              <div class="section-leaf">Elopements, holidays &amp; festivals</div>
+              <div class="section-leaf sub-item">Elopements, holidays &amp; festivals</div>
               <div class="section-leaf">Venue showcase + catering menus</div>
             </div>
           </div>
@@ -672,19 +709,22 @@
           <div class="branch-body">
             <div class="main-stack">
               <div class="trunk"></div>
-              <div class="page-node">Plan Page</div>
-              <div class="section-leaf">Infographic — how to get here</div>
+              <div class="page-node">Plan Your Stay Overview</div>
+              <div class="section-leaf">How you get here, process</div>
+              <div class="section-leaf sub-item">Need to add infographic on how to get here</div>
             </div>
             <div class="sub-branch">
-              <div class="page-node">Travel & Private Aviation</div>
-              <div class="page-node">Airport Info + Fees</div>
+              <div class="page-node sub-page">Travel &amp; Private Aviation</div>
+              <div class="section-leaf">Consolidated travel info page</div>
+              <div class="page-node sub-page">Airport Info + Fees</div>
               <div class="section-leaf">Merged into single page</div>
-              <div class="section-leaf">Runway specs & new direct routes</div>
-              <div class="page-node">Packing & Dress Code</div>
-              <div class="page-node">FAQ</div>
+              <div class="section-leaf sub-item">Runway specs &amp; new direct routes</div>
+              <div class="page-node sub-page">Packing &amp; Dress Code</div>
+              <div class="page-node sub-page">FAQ</div>
               <div class="section-leaf">Direct Q&amp;A format — internal linking</div>
-              <div class="page-node">Policies</div>
-              <div class="page-node">Travel Protection / Insurance</div>
+              <div class="page-node sub-page">Policies</div>
+              <div class="page-node sub-page">Travel Protection / Insurance</div>
+              <div class="section-leaf">Own page or FAQ-adjacent section</div>
             </div>
           </div>
         </div>
@@ -695,8 +735,9 @@
           <div class="branch-body">
             <div class="main-stack">
               <div class="trunk"></div>
-              <div class="page-node">Offers Page</div>
-              <div class="section-leaf">Linked from homepage CTA + main nav</div>
+              <div class="page-node">Current Offers</div>
+              <div class="section-leaf">Current promotions and seasonal rates</div>
+              <div class="section-leaf sub-item">Linked from homepage CTA + main nav</div>
               <div class="section-leaf">Best Value label on strongest offer</div>
               <div class="section-leaf">Blackout dates — collapsed toggle</div>
             </div>
@@ -709,14 +750,15 @@
           <div class="branch-body">
             <div class="main-stack">
               <div class="trunk"></div>
-              <div class="page-node">Journal Page</div>
+              <div class="page-node">Journal Index</div>
               <div class="section-leaf">Editorial content hub including blog / press</div>
             </div>
             <div class="sub-branch">
-              <div class="page-node">Blog Posts & Editorial / Press</div>
+              <div class="page-node sub-page">Blog Posts &amp; Editorial / Press</div>
               <div class="section-leaf">Culinary, wildlife, island life, guest stories,<br>seasonal guides, sustainability</div>
               <div class="section-leaf">Clear subheadings + embedded FAQ where relevant</div>
-              <div class="page-node">Itineraries — curated day-plans (new)</div>
+              <div class="page-node sub-page">Itineraries</div>
+              <div class="section-leaf">Curated island day-plans (new)</div>
             </div>
           </div>
         </div>
@@ -749,7 +791,7 @@
               <div class="section-leaf">Relationship-first advisor intro line</div>
             </div>
             <div class="sub-branch">
-              <div class="page-node">Register as a Travel Advisor</div>
+              <div class="page-node sub-page">Register as a Travel Advisor</div>
               <div class="section-leaf">Constant Contact form</div>
               <div class="section-leaf">Full name</div>
               <div class="section-leaf">Agency name</div>
@@ -758,14 +800,14 @@
               <div class="section-leaf">Consortia affiliation</div>
               <div class="section-leaf">Prior bookings with Ambergris Cay</div>
               <div class="section-leaf">Trade-specific tagged submit flow</div>
-              <div class="page-node">Your Dedicated Contact</div>
+              <div class="page-node sub-page">Your Dedicated Contact</div>
               <div class="section-leaf">Name, title, photo, direct email / phone</div>
               <div class="section-leaf">Site visit CTA with preferred dates, party size, purpose</div>
-              <div class="page-node">Marketing Resources</div>
+              <div class="page-node sub-page">Marketing Resources</div>
               <div class="section-leaf">High-res photography, island fact sheet, boilerplate copy</div>
               <div class="section-leaf">Villa fact sheets</div>
               <div class="section-leaf">CTA linking to 360s</div>
-              <div class="page-node">What's New for Advisors</div>
+              <div class="page-node sub-page">What's New for Advisors</div>
               <div class="section-leaf">New villas, rate changes, seasonal notes</div>
             </div>
           </div>
